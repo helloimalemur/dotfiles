@@ -1,0 +1,1 @@
+function space { du -smh $1 | sort -h; }
