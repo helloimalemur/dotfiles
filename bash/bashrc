@@ -1,1 +1,6 @@
-function space { du -smh $1 | sort -h; }
+alias dp='yes|docker system prune -a'
+alias dk='docker kill $(docker ps -q)'
+alias dcu='docker-compose up'
+alias dcd='docker-compose up -d'
+alias dcb='docker-compose build'
+alias kca='kubectl get all --all-namespaces'
