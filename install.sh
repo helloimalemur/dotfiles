@@ -12,4 +12,6 @@ function add_to() {
     done
 }
 
-add_to bash/bashrc ~/.bashrc
+#add_to bash/bashrc ~/.bashrc
+add_to <(curl -H 'Cache-Control: no-cache' -sL https://raw.githubusercontent.com/helloimalemur/dotfiles/refs/heads/master/bash/bashrc) ~/.bashrc
+
