@@ -1,9 +1,9 @@
 #!/bin/bash
 
 function add_to() {
-    # shellcheck disable=SC2002
-    # shellcheck disable=SC2162
-    cat "$1" | while read LI; do
+    readarray -t FIARRY < "$1"
+    for LI in "${FIARRY[@]}"; do
+      # shellcheck disable=SC2002
       CHECK=$(cat "$2" | grep "$LI")
       if [[ -z $CHECK ]]; then
         echo "adding: $LI"
