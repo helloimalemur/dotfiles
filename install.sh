@@ -12,5 +12,4 @@ function add_to() {
     done
 }
 
-
 add_to bash/bashrc ~/.bashrc
