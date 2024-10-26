@@ -1,12 +1,16 @@
 #!/bin/bash
 
-LINES=$(cat bash/bashrc)
-for LI in "${LINES[@]};"; do
-  CHECK=$(cat ~/.bashrc | grep "$LI")
-  if [[ -z $CHECK ]]; then
-    echo "adding: $LI"
-    cat bash/bashrc >> ~/.bashrc
-  fi
-done
+function add_to() {
+    # shellcheck disable=SC2002
+    # shellcheck disable=SC2162
+    cat "$1" | while read LI; do
+      CHECK=$(cat "$2" | grep "$LI")
+      if [[ -z $CHECK ]]; then
+        echo "adding: $LI"
+        echo "$LI" >> ~/.bashrc
+      fi
+    done
+}
 
-#cat bash/bashrc >> ~/.bashrc
+
+add_to bash/bashrc ~/.bashrc
