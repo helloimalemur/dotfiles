@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "installing.. helloimalemur dotfiles .."
 function add_to() {
     mapfile -t FIARRY < "$1"
     for LI in "${FIARRY[@]}"; do
