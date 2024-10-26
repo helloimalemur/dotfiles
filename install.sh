@@ -1,5 +1,4 @@
 #!/bin/bash
-echo ""
 echo "installing dotfiles .."
 function add_to() {
     mapfile -t FIARRY < "$1"
