@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "installing dotfiles .."
-function add_to() {
+function add_from_to() {
     mapfile -t FIARRY< <(curl -H 'Cache-Control: no-cache' -sL https://raw.githubusercontent.com/helloimalemur/dotfiles/refs/heads/master/"$1")
     for LI in "${FIARRY[@]}"; do
       # shellcheck disable=SC2002
@@ -12,5 +12,5 @@ function add_to() {
     done
 }
 
-add_to bash/bashrc ~/.bashrc
+add_from_to bash/bashrc ~/.bashrc
 
