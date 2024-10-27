@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "installing dotfiles .."
 function add_from_to() {
-  if [[ -f bash/bashrc ]]; then
+  if [[ -f "$1" ]]; then
     mapfile -t FIARRY <"$1"
   else
     mapfile -t FIARRY< <(curl -H 'Cache-Control: no-cache' -sL https://raw.githubusercontent.com/helloimalemur/dotfiles/refs/heads/master/"$1")
