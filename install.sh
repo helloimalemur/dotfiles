@@ -11,7 +11,7 @@ function add_from_to() {
       CHECK=$(cat "$2" | grep "$LI")
       if [[ -z $CHECK ]]; then
         echo "adding: $LI"
-        echo "$LI" >> ~/.bashrc
+        echo "$LI" >> "$2"
       fi
     done
 }
