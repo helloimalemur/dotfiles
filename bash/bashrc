@@ -7,4 +7,5 @@ alias dcb='docker-compose build'
 alias wkca='watch "kubectl get all --all-namespaces | grep -v kube-system"'
 alias kca='kubectl get all --all-namespaces | grep -v kube-system'
 alias kcn="kubectl get all -n $1"
+alias k="kubectl"
 alias kc="kubectl"
