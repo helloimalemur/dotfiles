@@ -1,3 +1,4 @@
+alias dps='docker ps'
 alias dp='yes|docker system prune -a'
 alias dk='docker kill $(docker ps -q)'
 alias dcu='docker-compose up'
