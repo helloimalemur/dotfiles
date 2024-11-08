@@ -1,8 +1,1 @@
-killkill () {
-    TOKILL=$(ps aux | grep $1 | grep -v grep | tr -s ' ' | cut -d ' ' -f 2)
-    if [[ -z "$TOKILL" ]]; then
-        echo "cannot find process"
-    else
-        kill -9 $TOKILL
-    fi
-}
+killkill () { TOKILL=$(ps aux | grep $1 | grep -v grep | tr -s ' ' | cut -d ' ' -f 2); if [[ -z "$TOKILL" ]]; then echo "cannot find process"; else kill -9 $TOKILL; fi; }
