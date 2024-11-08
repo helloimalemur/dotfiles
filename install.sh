@@ -17,3 +17,4 @@ function add_from_to() {
 }
 
 add_from_to bash/bashrc ~/.bashrc
+add_from_to bash_func/bashfunc ~/.bashrc
