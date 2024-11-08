@@ -10,4 +10,3 @@ alias kca='kubectl get all --all-namespaces | grep -v kube-system'
 alias kcn="kubectl get all -n $1"
 alias k="kubectl"
 alias kc="kubectl"
-alias killkill="kill -9 $(ps aux | grep $1 | tr -s ' ' | cut -d ' ' -f2)"
